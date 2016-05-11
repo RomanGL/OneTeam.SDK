@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C82C8A6A-21B8-4237-9D56-120F6F72281B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OneTeam.SDK.VK</RootNamespace>
+    <AssemblyName>OneTeam.SDK.VK</AssemblyName>
+    <DefaultLanguage>ru-RU</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CaptchaRequestHandler.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Services\Interfaces\IVKLoginService.cs" />
+    <Compile Include="Services\Interfaces\IVKLongPollService.cs" />
+    <Compile Include="Services\Interfaces\IVKService.cs" />
+    <Compile Include="Json\VKBirthdayDateToDateTimeConverter.cs" />
+    <Compile Include="Json\VKBooleanConverter.cs" />
+    <Compile Include="Json\VKGroupCountersConverter.cs" />
+    <Compile Include="Json\VKLongPollUpdateConverter.cs" />
+    <Compile Include="Json\VKResponseErrorConverter.cs" />
+    <Compile Include="Models\Audio\VKAudio.cs" />
+    <Compile Include="Models\Audio\VKAudioAlbum.cs" />
+    <Compile Include="Models\Audio\VKAudioGenre.cs" />
+    <Compile Include="Models\Audio\VKAudioLyrics.cs" />
+    <Compile Include="Models\Common\IVKItemOwner.cs" />
+    <Compile Include="Models\Common\VKAccessToken.cs" />
+    <Compile Include="Models\Common\VKBaseItemsObject.cs" />
+    <Compile Include="Models\Common\VKCaptchaRequest.cs" />
+    <Compile Include="Models\Common\VKCaptchaResponse.cs" />
+    <Compile Include="Models\Common\VKCity.cs" />
+    <Compile Include="Models\Common\VKComments.cs" />
+    <Compile Include="Models\Common\VKCountedItemsObject.cs" />
+    <Compile Include="Models\Common\VKCountersBase.cs" />
+    <Compile Include="Models\Common\VKCountry.cs" />
+    <Compile Include="Models\Common\VKDeactivated.cs" />
+    <Compile Include="Models\Common\VKErrors.cs" />
+    <Compile Include="Models\Common\VKGeo.cs" />
+    <Compile Include="Models\Common\VKLikes.cs" />
+    <Compile Include="Models\Common\VKLink.cs" />
+    <Compile Include="Models\Common\VKMediaType.cs" />
+    <Compile Include="Models\Common\VKOperationIsSuccess.cs" />
+    <Compile Include="Models\Common\VKPlace.cs" />
+    <Compile Include="Models\Common\VKPlatform.cs" />
+    <Compile Include="Models\Common\VKReposts.cs" />
+    <Compile Include="Models\Common\VKResponse.cs" />
+    <Compile Include="Models\Groups\Settings\VKFourStateModule.cs" />
+    <Compile Include="Models\Groups\Settings\VKGroupAccess.cs" />
+    <Compile Include="Models\Groups\Settings\VKGroupSettings.cs" />
+    <Compile Include="Models\Groups\Settings\VKGroupSubject.cs" />
+    <Compile Include="Models\Groups\Settings\VKThreeStateModule.cs" />
+    <Compile Include="Models\Groups\Settings\VKTwoStateModule.cs" />
+    <Compile Include="Models\Groups\VKContact.cs" />
+    <Compile Include="Models\Groups\VKGroup.cs" />
+    <Compile Include="Models\Groups\VKGroupCounters.cs" />
+    <Compile Include="Models\Groups\VKGroupExtended.cs" />
+    <Compile Include="Models\Groups\VKGroupIsClosed.cs" />
+    <Compile Include="Models\Groups\VKGroupMainSection.cs" />
+    <Compile Include="Models\Groups\VKGroupType.cs" />
+    <Compile Include="Models\Groups\VKLink.cs" />
+    <Compile Include="Models\Groups\VKUserBanInfo.cs" />
+    <Compile Include="Models\Groups\VKUserIsAdmin.cs" />
+    <Compile Include="Models\Groups\VKUserMemberStatus.cs" />
+    <Compile Include="Models\LongPoll\Updates\IVKLongPollUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\MessageDeletedUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\MessageFlagsReplacedUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\MessageFlagsResettedUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\MessageFlagsSettedUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\MessageReceivedUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\MessagesCounterChangedUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\RawUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\UserIsTypingInChatUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\UserIsTypingInDialogUpdate.cs" />
+    <Compile Include="Models\LongPoll\Updates\VKLongPollUpdateType.cs" />
+    <Compile Include="Models\LongPoll\VKLongPollErrors.cs" />
+    <Compile Include="Models\LongPoll\VKLongPollResponse.cs" />
+    <Compile Include="Models\LongPoll\VKLongPollServerData.cs" />
+    <Compile Include="Models\LongPoll\VKLongPollServiceStopReason.cs" />
+    <Compile Include="Models\LongPoll\VKMessageFlags.cs" />
+    <Compile Include="Models\LongPoll\WebConnectionException.cs" />
+    <Compile Include="Models\Newsfeed\VKNewsfeedGetResponse.cs" />
+    <Compile Include="Models\Newsfeed\VKNewsfeedItem.cs" />
+    <Compile Include="Models\Newsfeed\VKNewsfeedItemType.cs" />
+    <Compile Include="Models\Photo\VKAlbumModel.cs" />
+    <Compile Include="Models\Users\VKAlcohol.cs" />
+    <Compile Include="Models\Users\VKLifeMain.cs" />
+    <Compile Include="Models\Users\VKOccupation.cs" />
+    <Compile Include="Models\Users\VKOccupationType.cs" />
+    <Compile Include="Models\Users\VKPeopleMain.cs" />
+    <Compile Include="Models\Users\VKPersonalInfo.cs" />
+    <Compile Include="Models\Users\VKPolitical.cs" />
+    <Compile Include="Models\Users\VKRelation.cs" />
+    <Compile Include="Models\Users\VKSchool.cs" />
+    <Compile Include="Models\Users\VKSmoking.cs" />
+    <Compile Include="Models\Users\VKUniversity.cs" />
+    <Compile Include="Models\Users\VKUser.cs" />
+    <Compile Include="Models\Users\VKUserContacts.cs" />
+    <Compile Include="Models\Users\VKUserCounters.cs" />
+    <Compile Include="Models\Users\VKUserEducation.cs" />
+    <Compile Include="Models\Users\VKUserLastSeen.cs" />
+    <Compile Include="Models\Users\VKUserSex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\VKLoginService.cs" />
+    <Compile Include="Services\VKLongPollService.cs" />
+    <Compile Include="Services\VKService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OneTeam.SDK.Core\OneTeam.SDK.Core.csproj">
+      <Project>{F15C5B26-520E-465B-B48B-EE32DA5270DE}</Project>
+      <Name>OneTeam.SDK.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
