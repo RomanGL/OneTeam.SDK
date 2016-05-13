@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTeam.SDK.VK", "OneTeam.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTeam.SDK.Core", "OneTeam.SDK.Core\OneTeam.SDK.Core.csproj", "{F15C5B26-520E-465B-B48B-EE32DA5270DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneTeam.SDK.LastFm", "OneTeam.SDK.LastFm\OneTeam.SDK.LastFm.csproj", "{6C220A98-8835-4F2A-96EB-A0AF6A39531C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F15C5B26-520E-465B-B48B-EE32DA5270DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F15C5B26-520E-465B-B48B-EE32DA5270DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F15C5B26-520E-465B-B48B-EE32DA5270DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C220A98-8835-4F2A-96EB-A0AF6A39531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C220A98-8835-4F2A-96EB-A0AF6A39531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C220A98-8835-4F2A-96EB-A0AF6A39531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C220A98-8835-4F2A-96EB-A0AF6A39531C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
