@@ -30,14 +30,18 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Output\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Output\OneTeam.SDK.VK.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CaptchaRequestHandler.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Models\Users\VKUserList.cs" />
+    <Compile Include="Models\Video\VKVideoAlbum.cs" />
+    <Compile Include="Models\Video\VKVideo.cs" />
     <Compile Include="Services\Interfaces\IVKLoginService.cs" />
     <Compile Include="Services\Interfaces\IVKLongPollService.cs" />
     <Compile Include="Services\Interfaces\IVKService.cs" />

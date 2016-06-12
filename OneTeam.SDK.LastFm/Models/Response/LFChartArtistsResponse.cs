@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using OneTeam.SDK.LastFm.Models.Audio;
 
-namespace OneTeam.SDK.LastFm.Models.Response.Response
+namespace OneTeam.SDK.LastFm.Models.Response
 {
     /// <summary>
     /// Представляет ответ сервера Last.fm на запрос чартов исполнителей.

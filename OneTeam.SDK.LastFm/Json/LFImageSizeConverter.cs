@@ -29,7 +29,27 @@ namespace OneTeam.SDK.LastFm.Json
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            switch ((LFImageSize)value)
+            {
+                case LFImageSize.Small:
+                    writer.WriteValue("small");
+                    break;
+                case LFImageSize.Medium:
+                    writer.WriteValue("medium");
+                    break;
+                case LFImageSize.Large:
+                    writer.WriteValue("large");
+                    break;
+                case LFImageSize.ExtraLarge:
+                    writer.WriteValue("extralarge");
+                    break;
+                case LFImageSize.Mega:
+                    writer.WriteValue("mega");
+                    break;
+                default:
+                    writer.WriteValue("unknown");
+                    break;
+            }
         }
     }
 }
