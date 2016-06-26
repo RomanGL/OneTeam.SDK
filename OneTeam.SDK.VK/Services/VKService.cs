@@ -17,7 +17,8 @@ namespace OneTeam.SDK.VK.Services
     {
         private const string API_ROOT = "https://api.vk.com/method/";
 
-        private IVKLoginService loginService;
+        private readonly IVKLoginService loginService;
+        private readonly ILanguageProvider languageProvider;
 
         /// <summary>
         /// Метод, выполняющий запрос каптчи у пользователя.
@@ -32,6 +33,12 @@ namespace OneTeam.SDK.VK.Services
         public VKService(IVKLoginService loginService)
         {
             this.loginService = loginService;
+        }
+
+        public VKService(IVKLoginService loginService, ILanguageProvider languageProvider)
+            : this(loginService)
+        {
+            this.languageProvider = languageProvider;
         }
 
         /// <summary>
@@ -55,6 +62,9 @@ namespace OneTeam.SDK.VK.Services
 
             var parameters = request.GetParameters();
             parameters["v"] = Constants.API_VERSION;
+
+            if (languageProvider != null)
+                parameters["lang"] = languageProvider.GetLanguage().ToString();
 
             try { parameters["access_token"] = loginService.Token; }
             catch(InvalidOperationException) { return new VKResponse<T> { Error = VKErrors.AuthorizationFailed }; }

@@ -308,5 +308,10 @@ namespace OneTeam.SDK.VK.Models.Users
         /// </summary>
         [JsonProperty("last_seen")]
         public VKLastSeen LastSeen { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

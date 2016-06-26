@@ -87,5 +87,10 @@ namespace OneTeam.SDK.VK.Models.Groups
         /// </summary>
         [JsonProperty("photo_200")]
         public string Photo200 { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

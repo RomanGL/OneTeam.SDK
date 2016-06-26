@@ -70,5 +70,10 @@ namespace OneTeam.SDK.VK.Models.Audio
         /// </summary>
         [JsonProperty("type")]
         public VKMediaType Type { get { return VKMediaType.Audio; } }
+
+        public override string ToString()
+        {
+            return $"{Artist} - {Title}";
+        }
     }
 }

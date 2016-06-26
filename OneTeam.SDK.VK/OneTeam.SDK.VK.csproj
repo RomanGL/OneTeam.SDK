@@ -39,9 +39,13 @@
   <ItemGroup>
     <Compile Include="CaptchaRequestHandler.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Models\Common\Language.cs" />
+    <Compile Include="Models\Docs\VKDocument.cs" />
+    <Compile Include="Models\Docs\VKDocumentType.cs" />
     <Compile Include="Models\Users\VKUserList.cs" />
     <Compile Include="Models\Video\VKVideoAlbum.cs" />
     <Compile Include="Models\Video\VKVideo.cs" />
+    <Compile Include="Services\Interfaces\ILanguageProvider.cs" />
     <Compile Include="Services\Interfaces\IVKLoginService.cs" />
     <Compile Include="Services\Interfaces\IVKLongPollService.cs" />
     <Compile Include="Services\Interfaces\IVKService.cs" />

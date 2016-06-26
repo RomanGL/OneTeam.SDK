@@ -87,5 +87,10 @@ namespace OneTeam.SDK.VK.Models.Video
         /// </summary>
         [JsonProperty("id")]
         public long ID { get; set; }
+
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }

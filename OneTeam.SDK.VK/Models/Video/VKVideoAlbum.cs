@@ -22,5 +22,10 @@ namespace OneTeam.SDK.VK.Models.Video
         /// </summary>
         [JsonProperty("title")]
         public string Title { get; set; }
+
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }

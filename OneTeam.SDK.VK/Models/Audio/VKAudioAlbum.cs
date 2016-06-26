@@ -10,7 +10,7 @@ namespace OneTeam.SDK.VK.Models.Audio
         /// <summary>
         /// Идентификатор альбома ВКонтакте.
         /// </summary>
-        [JsonProperty("album_id")]
+        [JsonProperty("id")]
         public long ID { get; set; }
         /// <summary>
         /// Идентификатор владельца альбома.
@@ -22,5 +22,10 @@ namespace OneTeam.SDK.VK.Models.Audio
         /// </summary>
         [JsonProperty("title")]
         public string Title { get; set; }
+
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }
