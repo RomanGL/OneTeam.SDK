@@ -62,6 +62,11 @@ namespace OneTeam.SDK.VK.Models.Video
         [JsonProperty("photo_640")]
         public string Photo640 { get; set; }
         /// <summary>
+        /// Ссылка на картинку шириной 800 пикс.
+        /// </summary>
+        [JsonProperty("photo_800")]
+        public string Photo800 { get; set; }
+        /// <summary>
         /// Дата добавления видеозаписи.
         /// </summary>
         [JsonProperty("date")]
@@ -80,7 +85,7 @@ namespace OneTeam.SDK.VK.Models.Video
         /// <summary>
         /// Ссылка на HTML5 проигрыватель.
         /// </summary>
-        [JsonProperty("count")]
+        [JsonProperty("player")]
         public string Player { get; set; }
         /// <summary>
         /// Идентификатор видеозаписи.
